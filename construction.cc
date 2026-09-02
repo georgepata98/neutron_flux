@@ -33,11 +33,13 @@ void MyDetectorConstruction::ConstructSDandField()
         fluxDet = new G4MultiFunctionalDetector("fluxDet");
         G4SDManager::GetSDMpointer()->AddNewDetector(fluxDet);
         
-        // G4PSFlatSurfaceCurrent functioneaza doar cu volume G4Box:
-        primitive = new G4PSFlatSurfaceCurrent("Fdep", fCurrent_In);  // unitatea default e in [mm^-2] cf. Claude code
+        // G4PSFlatSurfaceCurrent si G4PSFlatSurfaceFlux functioneaza doar cu volume G4Box:
+        //primitive = new G4PSFlatSurfaceCurrent("Fdep", fCurrent_In);  // unitatea default e in [mm^-2] cf. Claude code
+        primitive = new G4PSFlatSurfaceFlux("Fdep", fFlux_In);  // Gemini, ChatGPT si Claude spun ca e mai bun asta de fol. pt. fluenta de neutroni
         // fCurrent_In    : doar particule care intra
         // fCurrent_Out   : doar particule care ies
         // fCurrent_InOut : ambele (implicit)
+        // analog fFlux_in, fFlux_Out, fFlux_InOut
 
         fluxDet->RegisterPrimitive(primitive);
         
