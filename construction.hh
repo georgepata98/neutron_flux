@@ -14,7 +14,8 @@
 
 #include "G4VPrimitiveScorer.hh"
 #include "G4MultiFunctionalDetector.hh"
-#include "G4PSFlatSurfaceCurrent.hh"
+// #include "G4PSFlatSurfaceCurrent.hh"
+#include "G4PSFlatSurfaceFlux.hh"
 
 class MyDetectorConstruction : public G4VUserDetectorConstruction
 {
