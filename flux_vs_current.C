@@ -40,10 +40,10 @@
     
     c1->SetGrid();
     gr1->SetMarkerStyle(21);
-    gr1->SetLineWidth(3);
+    gr1->SetLineWidth(2);
     gr1->SetLineColor(kRed);
     gr2->SetMarkerStyle(22);
-    gr2->SetLineWidth(3);
+    gr2->SetLineWidth(2);
     gr2->SetLineColor(kBlue);
     mg->Add(gr1);
     mg->Add(gr2);
